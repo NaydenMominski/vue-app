@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -6,6 +5,7 @@
  */
 
 require('./bootstrap');
+import Form from './utilities/Form'
 
 window.Vue = require('vue');
 
@@ -29,5 +29,20 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    data: {
+        form: new Form({
+            name: '',
+            description: ''
+        })
+    },
+
+    methods: {
+        onSubmit() {
+            this.form.post('/projects')
+                .then(response => alert('Wahoo!'))
+                .catch(errors => console.log(errors));
+        }
+    }
 });
