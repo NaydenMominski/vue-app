@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
+        @include ('projects.list')
+
         <form method="POST" action="/projects" @submit.prevent="onSubmit" @keydown="form.errors.clear($event.target.name)">
             <div class="control">
                 <label for="name" class="label">Project Name:</label>

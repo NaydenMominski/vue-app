@@ -21,6 +21,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('carousel', require('./components/Carousel.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -31,18 +33,18 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 
-    data: {
-        form: new Form({
-            name: '',
-            description: ''
-        })
-    },
+    // data: {
+    //     form: new Form({
+    //         name: '',
+    //         description: ''
+    //     })
+    // },
 
-    methods: {
-        onSubmit() {
-            this.form.post('/projects')
-                .then(response => alert('Wahoo!'))
-                .catch(errors => console.log(errors));
-        }
-    }
+    // methods: {
+    //     onSubmit() {
+    //         this.form.post('/projects')
+    //             .then(response => alert('Wahoo!'))
+    //             .catch(errors => console.log(errors));
+    //     }
+    // }
 });

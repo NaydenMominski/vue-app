@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css">
     <style>body { padding-top: 40px; }</style>
 </head>
-
 <body>
-    <div id="app" class="container">
-        @include ('projects.list')
+    <title>Carousel</title>
+    <div id="app" >
 
         @yield('content')
     </div>

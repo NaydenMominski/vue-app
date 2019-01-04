@@ -24,5 +24,9 @@
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.5.21"
+    },
+    "dependencies": {
+        "@types/flickity": "^2.0.2",
+        "flickity": "^2.1.2"
     }
 }
